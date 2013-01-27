@@ -174,6 +174,7 @@ def gcd(a,b):
     if b>a: return gcd(b,a)
     if a%b==0: return b
     else: return gcd(b,a%b)
+    
 def int2(a,k):
     if a<0 or k>10:
         print('can\'t handle negative number or k>10.' )
@@ -189,9 +190,22 @@ def mean(l):
     for i in l:
         sum+=i
     return sum/len(l)
+
 def variance(l):
     s=0.0
     m=mean(l)
     for i in l:
         sum+=(i-m)^2
     return sum/len(l)
+
+def num2list(n):
+    return list(str(n))
+
+def list2num(l):
+    '''return a number from a list of digits'''
+    s = ''
+    for i in l: s += i
+    return int(s)
+        
+
+#print(primes(10000))
