@@ -8,12 +8,12 @@ import math
 import fractions
 def Isprime(i):
     if abs(i)<2: return False
-    bool=True;
+    flag = True;
     j=2
     while j<=math.sqrt(abs(i)):
         if i%j==0: return False
         j+=1
-    return bool
+    return flag
 def primes(t):
     t+=1
     p=list(range(2,t+1))
@@ -68,13 +68,13 @@ def Is_tri_num(i):
     if n*(n+1)//2==i: 
         return True 
     else: return False 
-def all_perms(str):
-    if len(str) <=1:
-        yield str
+def all_perms(s):
+    if len(s) <=1:
+        yield s
     else:
-        for perm in all_perms(str[1:]):
+        for perm in all_perms(s[1:]):
             for i in range(len(perm)+1):
-                yield perm[:i] + str[0:1] + perm[i:]
+                yield perm[:i] + s[0:1] + perm[i:]
 #p=[int(i.rstrip())for i in open('primes.txt')]
 def classification(li):
     '''
@@ -207,5 +207,11 @@ def list2num(l):
     for i in l: s += i
     return int(s)
         
-
+def factorial(n):
+    p = 1
+    for i in range(2, n+1):
+        p *= i
+    return p
+    
+    
 #print(primes(10000))
