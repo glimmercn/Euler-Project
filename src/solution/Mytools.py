@@ -14,6 +14,21 @@ def Isprime(i):
         if i%j==0: return False
         j+=1
     return flag
+
+def primes2(n):
+    primes = [2, 3]
+    for number in range(5, n+1, 2):
+        isprime = True
+        for p in primes:
+            if number % p == 0:
+                isprime = False
+                break
+            if p > number ** .5:
+                break
+        if isprime:
+            primes.append(number)
+    return primes
+
 def primes(t):
     t+=1
     p=list(range(2,t+1))
@@ -34,17 +49,17 @@ def primes_shelter(t):
         for j in range(i*2,t+1,i):
             p[j]=0
     return p
-def primes2(t):
-    if t<2: return []
-    p=[2]
-    for i in range(3,t+1):
-        isprime=True
-        j=0
-        while p[j]<=math.sqrt(i)and j<len(p):
-            if i%p[j]==0:isprime=False
-            j+=1
-        if isprime: p.append(i)
-    return p
+#def primes2(t):
+#    if t<2: return []
+#    p=[2]
+#    for i in range(3,t+1):
+#        isprime=True
+#        j=0
+#        while p[j]<=math.sqrt(i)and j<len(p):
+#            if i%p[j]==0:isprime=False
+#            j+=1
+#        if isprime: p.append(i)
+#    return p
 def penta(i):
     return int((3*i-1)*i/2)
 def Ispentagon(x):
