@@ -21,9 +21,9 @@ for i in range(18):
                 TempD[str(j)+k[0]] += D[k]
     D = TempD
 
-sum = 0
+Sum = 0
 for k in D.keys():
-    if k[0] != '0': sum += D[k] 
+    if k[0] != '0': Sum += D[k] 
 
-print(sum)
+print(Sum)
         
