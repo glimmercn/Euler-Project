@@ -6,6 +6,7 @@ Created on 2011-4-27
 '''
 import math
 import fractions
+import random
 def Isprime(i):
     if abs(i)<2: return False
     flag = True;
@@ -201,17 +202,17 @@ def int2(a,k):
             return int2(a//k,k)+str(a%k)
 
 def mean(l):
-    sum=0.0
+    s=0.0
     for i in l:
-        sum+=i
-    return sum/len(l)
+        s+=i
+    return s/len(l)
 
 def variance(l):
     s=0.0
     m=mean(l)
     for i in l:
-        sum+=(i-m)^2
-    return sum/len(l)
+        s+=(i-m)^2
+    return s/len(l)
 
 def num2list(n):
     return list(str(n))
@@ -228,5 +229,3 @@ def factorial(n):
         p *= i
     return p
     
-    
-#print(primes(10000))
