@@ -229,3 +229,9 @@ def factorial(n):
         p *= i
     return p
     
+def isPalindromic(s):
+    s1 = s[::-1]
+    return s == s1
+
+if __name__ == '__main__':
+    print(isPalindromic('aba'))
